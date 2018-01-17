@@ -7,22 +7,59 @@ public class PlayerMovement : MonoBehaviour
 {
     public float speed = 1.0f;
 
-    private new Rigidbody2D rigidbody2D;
+    private Rigidbody2D body;
+
+    private bool useMouse = false;
 
     private void Start()
     {
-        rigidbody2D = GetComponent<Rigidbody2D>();
+        body = GetComponent<Rigidbody2D>();
     }
 
     private void FixedUpdate()
     {
+        UpdateMovement();
+
+        UpdateMode();
+        UpdateLook();
+    }
+
+    private void UpdateMovement()
+    {
         Vector2 direction = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-        rigidbody2D.velocity = direction * speed;
+        body.velocity = direction * speed;
+    }
 
-        var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+    private void UpdateMode()
+    {
+        var mouse = new Vector2(Input.GetAxisRaw("Mouse X"), Input.GetAxisRaw("Mouse Y"));
+        var joystick = new Vector2(Input.GetAxisRaw("Horizontal Look"), Input.GetAxisRaw("Vertical Look"));
 
-        var look = GetMouseWorldPosition() - rigidbody2D.position;
-        rigidbody2D.rotation = Mathf.Rad2Deg * Mathf.Atan2(look.y, look.x);
+        if (mouse.SqrMagnitude() > Mathf.Epsilon)
+            useMouse = true;
+        else if (joystick.SqrMagnitude() > Mathf.Epsilon)
+            useMouse = false;
+    }
+
+    private void UpdateLook()
+    {
+        body.rotation = Mathf.Rad2Deg * GetLookAngle();
+    }
+
+    private float GetLookAngle()
+    {
+        if (useMouse)
+        {
+            var look = GetMouseWorldPosition() - body.position;
+            return Mathf.Atan2(look.y, look.x);
+        }
+        else
+        {
+            var look = new Vector2(Input.GetAxisRaw("Horizontal Look"), Input.GetAxisRaw("Vertical Look"));
+            return look.SqrMagnitude() > 0.8f
+                ? Mathf.Atan2(look.y, look.x)
+                : Mathf.Deg2Rad * body.rotation;
+        }
     }
 
     private Vector2 GetMouseWorldPosition()
