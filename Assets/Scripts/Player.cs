@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class PlayerMovement : MonoBehaviour
+public class Player : MonoBehaviour
 {
     public float speed = 1.0f;
 
     private Rigidbody2D body;
 
     private bool useMouse = false;
+
+    public Rigidbody2D Body { get { return body; } }
 
     private void Start()
     {
