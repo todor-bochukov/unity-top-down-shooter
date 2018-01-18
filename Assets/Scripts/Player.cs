@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,6 +9,7 @@ public class Player : MonoBehaviour
     public float speed = 1.0f;
 
     private Rigidbody2D body;
+    private GameControl control;
 
     private bool useMouse = false;
 
@@ -16,6 +18,7 @@ public class Player : MonoBehaviour
     private void Start()
     {
         body = GetComponent<Rigidbody2D>();
+        control = GetComponentInParent<GameControl>();
     }
 
     private void FixedUpdate()
@@ -29,7 +32,7 @@ public class Player : MonoBehaviour
     private void UpdateMovement()
     {
         Vector2 direction = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-        body.velocity = direction * speed;
+        body.velocity = direction * speed * control.TimeScale;
     }
 
     private void UpdateMode()
@@ -45,6 +48,9 @@ public class Player : MonoBehaviour
 
     private void UpdateLook()
     {
+        if (control.TimeScale == 0)
+            return;
+
         body.rotation = Mathf.Rad2Deg * GetLookAngle();
     }
 

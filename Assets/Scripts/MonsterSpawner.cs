@@ -11,11 +11,15 @@ public class MonsterSpawner : MonoBehaviour
     public uint targetMonsterCount;
     public float minimumTimeBetweenSpawns;
 
+    private GameControl control;
+
     private List<Monster> monsters = new List<Monster>();
     private float lastSpawnTime;
 
     private void Start()
     {
+        control = GetComponentInParent<GameControl>();
+
         if (spawnLocations.Length == 0)
         {
             spawnLocations = new Transform[1];
@@ -26,7 +30,7 @@ public class MonsterSpawner : MonoBehaviour
     private void Update()
     {
         if (monsters.Count < targetMonsterCount &&
-            lastSpawnTime + minimumTimeBetweenSpawns < Time.time)
+            lastSpawnTime + minimumTimeBetweenSpawns < Time.time * control.TimeScale)
         {
             lastSpawnTime = Time.time;
 
