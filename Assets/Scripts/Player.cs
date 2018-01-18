@@ -29,6 +29,26 @@ public class Player : MonoBehaviour
         UpdateLook();
     }
 
+    private void OnEnable()
+    {
+        var control = GetComponentInParent<GameControl>();
+        if (control != null)
+            control.onRestart += Restart;
+    }
+
+    private void OnDisable()
+    {
+        var control = GetComponentInParent<GameControl>();
+        if (control != null)
+            control.onRestart += Restart;
+    }
+
+    void Restart()
+    {
+        body.position = new Vector2();
+        body.velocity = new Vector2();
+    }
+
     private void UpdateMovement()
     {
         Vector2 direction = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
