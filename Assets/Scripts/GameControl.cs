@@ -2,12 +2,38 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public delegate void SetActiveDelegate(bool active);
+
 public class GameControl : MonoBehaviour
 {
-    // Update is called once per frame
-    void Update()
+    public UIControl ui;
+    public float timeScaleSmoothTime;
+
+    public float TimeScale { get; private set; }
+
+    private float timeScaleVelocity;
+
+    private void Update()
     {
+        bool inUI = ui.gameObject.activeSelf;
+
         if (Input.GetKeyUp(KeyCode.Escape))
-            Application.Quit();
+        {
+            ToggleUI(!inUI);
+        }
+
+        if (!inUI)
+        {
+            TimeScale = Mathf.SmoothDamp(TimeScale, 1f, ref timeScaleVelocity, timeScaleSmoothTime);
+        }
+    }
+
+    public void ToggleUI(bool openUI)
+    {
+        ui.gameObject.SetActive(openUI);
+
+        // Stop game / restart timeScale timer.
+        TimeScale = 0f;
+        timeScaleVelocity = 0f;
     }
 }
