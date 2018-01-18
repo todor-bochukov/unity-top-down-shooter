@@ -21,9 +21,6 @@ public class Monster : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (control.TimeScale == 0f)
-            return;
-
         body.velocity = (player.Body.position - body.position).normalized * speed * control.TimeScale;
     }
 }
