@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public delegate void SetActiveDelegate(bool active);
-
 public class GameControl : MonoBehaviour
 {
     public UIControl ui;
@@ -21,8 +19,7 @@ public class GameControl : MonoBehaviour
         {
             ToggleUI(!inUI);
         }
-
-        if (!inUI)
+        else if (!inUI)
         {
             TimeScale = Mathf.SmoothDamp(TimeScale, 1f, ref timeScaleVelocity, timeScaleSmoothTime);
         }
