@@ -12,4 +12,9 @@ public class UIControl : MonoBehaviour
         UnityEditor.EditorApplication.isPlaying = false;
 #endif // UNITY_EDITOR
     }
+
+    public void GameOver()
+    {
+        // ???
+    }
 }

@@ -23,4 +23,12 @@ public class Monster : MonoBehaviour
     {
         body.velocity = (player.Body.position - body.position).normalized * speed * control.TimeScale;
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (player.Body == collision.rigidbody)
+        {
+            control.KillPlayer();
+        }
+    }
 }

@@ -38,6 +38,31 @@ public class MonsterSpawner : MonoBehaviour
         }
     }
 
+    private void OnEnable()
+    {
+        var control = GetComponentInParent<GameControl>();
+        if (control != null)
+            control.onRestart += Restart;
+    }
+
+    private void OnDisable()
+    {
+        var control = GetComponentInParent<GameControl>();
+        if (control != null)
+            control.onRestart += Restart;
+    }
+
+    private void Restart()
+    {
+        foreach (var monster in monsters)
+        {
+            Destroy(monster.gameObject);
+        }
+        monsters.Clear();
+
+        lastSpawnTime = Time.time;
+    }
+
     private void TrySpawnMonster()
     {
         if (monsterPrefabs.Length == 0 || spawnLocations.Length == 0)

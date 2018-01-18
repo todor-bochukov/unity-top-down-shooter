@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,6 +8,7 @@ public class GameControl : MonoBehaviour
     public UIControl ui;
     public float timeScaleSmoothTime;
 
+    public event Action onRestart;
     public float TimeScale { get; private set; }
 
     private float timeScaleVelocity;
@@ -23,6 +25,12 @@ public class GameControl : MonoBehaviour
         {
             TimeScale = Mathf.SmoothDamp(TimeScale, 1f, ref timeScaleVelocity, timeScaleSmoothTime);
         }
+    }
+
+    public void KillPlayer()
+    {
+        if (onRestart != null)
+            onRestart();
     }
 
     public void ToggleUI(bool openUI)
