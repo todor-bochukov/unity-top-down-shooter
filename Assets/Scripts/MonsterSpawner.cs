@@ -52,6 +52,12 @@ public class MonsterSpawner : MonoBehaviour
             control.onRestart += Restart;
     }
 
+    public void KillMonster(Monster monster)
+    {
+        monsters.Remove(monster);
+        Destroy(monster.gameObject);
+    }
+
     private void Restart()
     {
         foreach (var monster in monsters)

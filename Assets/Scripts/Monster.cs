@@ -6,7 +6,6 @@ public class Monster : MonoBehaviour
 {
     public float speed;
 
-    private Player player;
     private Rigidbody2D body;
     private GameControl control;
 
@@ -14,21 +13,41 @@ public class Monster : MonoBehaviour
     {
         body = GetComponent<Rigidbody2D>();
         control = GetComponentInParent<GameControl>();
-
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
-        Debug.Assert(player != null);
     }
 
     private void FixedUpdate()
     {
-        body.velocity = (player.Body.position - body.position).normalized * speed * control.TimeScale;
+        Player closestPlayer = null;
+        foreach (var playerObject in GameObject.FindGameObjectsWithTag("Player"))
+        {
+            var player = playerObject.GetComponent<Player>();
+            if (!player) continue;
+
+            if (!closestPlayer ||
+                GetDistanceToPlayer(closestPlayer) > GetDistanceToPlayer(player))
+            {
+                closestPlayer = player;
+            }
+        }
+
+        body.velocity = GetDirectionToPlayer(closestPlayer) * speed * control.TimeScale;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (player.Body == collision.rigidbody)
-        {
-            control.KillPlayer();
-        }
+        var player = collision.rigidbody.GetComponent<Player>();
+        if (player == null) return;
+
+        control.KillPlayer();
+    }
+
+    private Vector2 GetDirectionToPlayer(Player player)
+    {
+        return (player.Body.position - body.position).normalized;
+    }
+
+    private float GetDistanceToPlayer(Player player)
+    {
+        return (player.Body.position - body.position).magnitude;
     }
 }
