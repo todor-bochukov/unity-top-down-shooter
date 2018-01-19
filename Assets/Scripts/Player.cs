@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
     private bool useMouse = false;
 
     public Rigidbody2D Body { get { return body; } }
+    public Weapon Weapon { get; set; }
 
     private void Start()
     {
@@ -28,6 +29,36 @@ public class Player : MonoBehaviour
 
         UpdateMode();
         UpdateLook();
+
+        // Weapons.
+        if (Weapon)
+        {
+            Weapon.Reposition(body.position);
+
+            var force = playerLook.rotation * Vector2.right;
+
+            var fire1 = Input.GetButtonDown("Fire1");
+            var fire2 = Input.GetButtonDown("Fire2");
+
+            if (Weapon.Ammo && fire1)
+            {
+                force *= 2 * (Weapon.force + Weapon.Ammo.force);
+                Weapon.Ammo.State = WeaponState.Flying;
+                Weapon.Ammo.Body.velocity = force;
+                Weapon.Ammo.Body.rotation = Mathf.Rad2Deg * Mathf.Atan2(force.y, force.x);
+
+                Weapon.Ammo = null;
+            }
+            else if (fire1 || fire2)
+            {
+                force *= Weapon.force;
+                Weapon.State = WeaponState.Flying;
+                Weapon.Body.velocity = force;
+                Weapon.Body.rotation = Mathf.Rad2Deg * Mathf.Atan2(force.y, force.x);
+                Weapon = null;
+            }
+        }
+
     }
 
     private void OnEnable()
