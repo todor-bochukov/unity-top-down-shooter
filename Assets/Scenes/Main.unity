@@ -367,7 +367,7 @@ Transform:
   m_GameObject: {fileID: 338715134}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 80, y: 60, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1563770045}
   m_RootOrder: 0
@@ -406,14 +406,14 @@ SpriteRenderer:
   m_SortingLayerID: -77045935
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2a40d077b286b1b4782dc8c23e61c603, type: 3}
-  m_Color: {r: 0.24751298, g: 0.28091666, b: 0.30882353, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 27e0e7a1e026f5a4a866599c8fc8a3e3, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_DrawMode: 2
+  m_Size: {x: 20, y: 12}
   m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
+  m_SpriteTileMode: 1
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
 --- !u!224 &342576953 stripped
@@ -956,6 +956,27 @@ Prefab:
     - target: {fileID: 1231148197040808, guid: cb18f34c5c0156741931d7c2580427d4, type: 2}
       propertyPath: m_TagString
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 212695017698905532, guid: cb18f34c5c0156741931d7c2580427d4,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 151f52161719efc499cd944efe50913e,
+        type: 3}
+    - target: {fileID: 212695017698905532, guid: cb18f34c5c0156741931d7c2580427d4,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212695017698905532, guid: cb18f34c5c0156741931d7c2580427d4,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212695017698905532, guid: cb18f34c5c0156741931d7c2580427d4,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cb18f34c5c0156741931d7c2580427d4, type: 2}
