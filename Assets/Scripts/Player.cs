@@ -7,6 +7,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public float speed = 1.0f;
+    public Transform playerLook;
 
     private Rigidbody2D body;
     private GameControl control;
@@ -71,7 +72,7 @@ public class Player : MonoBehaviour
         if (control.TimeScale == 0)
             return;
 
-        body.rotation = Mathf.Rad2Deg * GetLookAngle();
+        playerLook.rotation = Quaternion.Euler(0, 0, Mathf.Rad2Deg * GetLookAngle());
     }
 
     private float GetLookAngle()
