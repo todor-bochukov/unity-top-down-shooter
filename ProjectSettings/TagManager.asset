@@ -50,7 +50,10 @@ TagManager:
   - name: Projectile
     uniqueID: 1608050411
     locked: 0
-  - name: Character
+  - name: Monster
+    uniqueID: 203636713
+    locked: 0
+  - name: Player
     uniqueID: 2141353153
     locked: 0
   - name: Weapon
