@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
 {
     public float speed = 1.0f;
     public Transform playerLook;
+    public Animator animator;
 
     private Rigidbody2D body;
     private GameControl control;
@@ -103,7 +104,9 @@ public class Player : MonoBehaviour
         if (control.TimeScale == 0)
             return;
 
-        playerLook.rotation = Quaternion.Euler(0, 0, Mathf.Rad2Deg * GetLookAngle());
+        float angle = Mathf.Rad2Deg * GetLookAngle();
+        playerLook.rotation = Quaternion.Euler(0, 0, angle);
+        animator.SetFloat("angle", angle);
     }
 
     private float GetLookAngle()
