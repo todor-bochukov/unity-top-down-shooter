@@ -9,6 +9,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1a425d7527c27d145a55b1f6605716b1, type: 3}
-  m_Name: Dart
+  m_Name: Basketball
   m_EditorClassIdentifier: 
-  ammoTypes: []
+  icon: {fileID: 1405963984921150, guid: c5d0dbd8ade7c064b87ec91379253b55, type: 2}
+  pickable: {fileID: 1658764686067564, guid: ff05a0c6169a1d54482fdea756cd2c8e, type: 2}
+  projectile: {fileID: 1908470427033436, guid: d65999347297e8646a093e7cdee765ed, type: 2}

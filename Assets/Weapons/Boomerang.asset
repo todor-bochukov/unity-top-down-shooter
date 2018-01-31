@@ -9,7 +9,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1a425d7527c27d145a55b1f6605716b1, type: 3}
-  m_Name: Dart Gun
+  m_Name: Boomerang
   m_EditorClassIdentifier: 
-  ammoTypes:
-  - {fileID: 11400000, guid: f6ec19b3fb6bcd441ba4839596dc0976, type: 2}
+  icon: {fileID: 1750339450922712, guid: 172bf35f9ed959547a57105bed9c2a4b, type: 2}
+  pickable: {fileID: 1154960277220062, guid: 12e8a53871bc3ed44b395fd47ffb67e3, type: 2}
+  projectile: {fileID: 1148826062784662, guid: 139e2b5b6117d14459d9581e9fd076cc, type: 2}
