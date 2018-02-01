@@ -5,7 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class Boomerang : MonoBehaviour
 {
-    public Vector2 force;
+    public Vector2 velocity;
 
     public Rigidbody2D Body { get { return body; } }
 
@@ -14,15 +14,11 @@ public class Boomerang : MonoBehaviour
     private void Start()
     {
         body = GetComponent<Rigidbody2D>();
-
-        body.AddRelativeForce(new Vector2(10, 0), ForceMode2D.Impulse);
-        // body.AddTorque(-1, ForceMode2D.Impulse);
+        body.velocity = transform.rotation * velocity;
     }
 
     private void FixedUpdate()
     {
-        body.AddRelativeForce(new Vector2(0, -0.1f), ForceMode2D.Impulse);
-        //body.AddRelativeForce(new Vector2(10, 0), ForceMode2D.Impulse);
-        //body.AddTorque(100, ForceMode2D.Impulse);
+        body.velocity = transform.rotation * velocity;
     }
 }
