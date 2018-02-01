@@ -19,10 +19,11 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4926405043585672}
-  - component: {fileID: 50190814741998680}
-  - component: {fileID: 58239201748226878}
-  - component: {fileID: 114135716486288154}
-  - component: {fileID: 114526688419320016}
+  - component: {fileID: 50164765286362554}
+  - component: {fileID: 58207859068644324}
+  - component: {fileID: 114449857786867716}
+  - component: {fileID: 95604883565569384}
+  - component: {fileID: 114905719405749384}
   m_Layer: 0
   m_Name: Boomerang Projectile
   m_TagString: Untagged
@@ -38,7 +39,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4906067812805746}
-  - component: {fileID: 95166320407610588}
   m_Layer: 0
   m_Name: Visuals
   m_TagString: Untagged
@@ -81,7 +81,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1253215093711822}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -96,23 +96,23 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1148826062784662}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.587911, y: 0.38061905, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4906067812805746}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &50190814741998680
+--- !u!50 &50164765286362554
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1148826062784662}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
-  m_UseFullKinematicContacts: 1
+  m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
@@ -122,8 +122,8 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!58 &58239201748226878
+  m_Constraints: 4
+--- !u!58 &58207859068644324
 CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -132,20 +132,20 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!95 &95166320407610588
+--- !u!95 &95604883565569384
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1253215093711822}
-  m_Enabled: 0
+  m_GameObject: {fileID: 1148826062784662}
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 49ce31a929b5d74479bed3dbb38ad620, type: 2}
   m_CullingMode: 0
@@ -155,7 +155,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114135716486288154
+--- !u!114 &114449857786867716
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -167,7 +167,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: {fileID: 11400000, guid: f6ec19b3fb6bcd441ba4839596dc0976, type: 2}
---- !u!114 &114526688419320016
+  minTimeToPickUp: 0.3
+--- !u!114 &114905719405749384
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -178,7 +179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a456cf61e72436e4cb17cab9e0ef71d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: {x: 10, y: 9}
+  velocity: {x: 0, y: 0}
 --- !u!212 &212475764354656550
 SpriteRenderer:
   m_ObjectHideFlags: 1
