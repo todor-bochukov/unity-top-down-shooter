@@ -2,23 +2,47 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(Projectile))]
 public class Boomerang : MonoBehaviour
 {
     public Vector2 velocity;
 
-    public Rigidbody2D Body { get { return body; } }
+    private Projectile projectile;
 
-    private Rigidbody2D body;
-
-    private void Start()
+    private void Awake()
     {
-        body = GetComponent<Rigidbody2D>();
-        body.velocity = transform.rotation * velocity;
+        projectile = GetComponent<Projectile>();
     }
 
     private void FixedUpdate()
     {
-        body.velocity = transform.rotation * velocity;
+        projectile.Body.velocity = transform.rotation * velocity;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        var player = collision.collider.GetComponent<Player>();
+        if (player && !player.Weapon && projectile.IsOldEnoughForPickup())
+        {
+            player.EquipWeapon(projectile.type);
+
+            Destroy(gameObject);
+        }
+
+        var monster = collision.collider.GetComponent<Monster>();
+        if (monster)
+        {
+            var spawner = monster.GetComponentInParent<MonsterSpawner>();
+            spawner.KillMonster(monster);
+        }
+
+        var wall = collision.collider.GetComponent<Wall>();
+        if (wall)
+        {
+            var contacts = collision.contacts;
+            var reflected = Vector2.Reflect(velocity, contacts[0].normal);
+
+            transform.Rotate(0, 0, Vector2.Angle(reflected, velocity));
+        }
     }
 }

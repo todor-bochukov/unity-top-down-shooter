@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     public float speed = 1.0f;
     public Transform playerLook;
     public Transform playerWeapon;
+    public Transform projectileSpawnPoint;
     public Animator animator;
 
     private Rigidbody2D body;
@@ -100,7 +101,7 @@ public class Player : MonoBehaviour
         if (Input.GetButtonDown("Fire1"))
         {
             var control = GetComponentInParent<GameControl>();
-            Instantiate(Weapon.projectile, transform.position, playerLook.rotation, control.transform);
+            Instantiate(Weapon.projectile, projectileSpawnPoint.position, playerLook.rotation, control.transform);
 
             Weapon = null;
 
