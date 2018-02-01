@@ -35,9 +35,10 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4915967924238808}
-  - component: {fileID: 58784700508223688}
   - component: {fileID: 50836069434017044}
+  - component: {fileID: 58784700508223688}
   - component: {fileID: 114333145267401726}
+  - component: {fileID: 114557507238909250}
   m_Layer: 0
   m_Name: Basketball Projectile
   m_TagString: Untagged
@@ -52,8 +53,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1273618434668346}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.29, y: -0.14, z: 0}
-  m_LocalScale: {x: 1.05, y: 1.05, z: 1}
+  m_LocalPosition: {x: -0.36, y: -0.175, z: 0}
+  m_LocalScale: {x: 1.3125, y: 1.3125, z: 1}
   m_Children: []
   m_Father: {fileID: 4915967924238808}
   m_RootOrder: 0
@@ -65,7 +66,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1908470427033436}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.91, y: 19.96, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4654867803552674}
@@ -79,7 +80,7 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1908470427033436}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -100,13 +101,13 @@ CircleCollider2D:
   m_GameObject: {fileID: 1908470427033436}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_Material: {fileID: 6200000, guid: 5e00d4d096f8f5d4ea6b543725ccf620, type: 2}
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.75
 --- !u!114 &114333145267401726
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -119,6 +120,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: {fileID: 11400000, guid: e0d61190b29d0754fbad11b6e8e84d7f, type: 2}
+  minTimeToPickUp: 0
+--- !u!114 &114557507238909250
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1908470427033436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bf739a4ec4730f4a9200a93f76afa57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  throwStrength: 25
 --- !u!212 &212574316165630812
 SpriteRenderer:
   m_ObjectHideFlags: 1
