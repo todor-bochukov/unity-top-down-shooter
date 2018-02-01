@@ -9,22 +9,22 @@ public class Projectile : MonoBehaviour
     public WeaponType type;
     public float minTimeToPickUp;
 
-    public Rigidbody2D Body { get { return body; } }
+    public Rigidbody2D Body { get; private set; }
+    public float SpawnTime { get; private set; }
 
-    private Rigidbody2D body;
-
-    private float spawnTime;
+    private void Awake()
+    {
+        Body = GetComponent<Rigidbody2D>();
+    }
 
     private void Start()
     {
-        spawnTime = Time.time;
-        Debug.Log("startTime");
-        body = GetComponent<Rigidbody2D>();
+        SpawnTime = Time.time;
     }
 
     private void FixedUpdate()
     {
-        if (body.IsSleeping())
+        if (Body.IsSleeping())
         {
             var control = GetComponentInParent<GameControl>();
             Instantiate(type.pickable, transform.position, transform.rotation, control.transform);
@@ -33,24 +33,10 @@ public class Projectile : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    public bool IsOldEnoughForPickup()
     {
-        var player = collision.collider.GetComponent<Player>();
+        if (SpawnTime == 0) return false;
 
-        if (player && !player.Weapon && IsOldEnoughForPickup())
-        {
-            player.EquipWeapon(type);
-            Destroy(gameObject);
-        }
-    }
-
-    private bool IsOldEnoughForPickup()
-    {
-        if (spawnTime == 0)
-            return false;
-
-        Debug.Log(" s " + spawnTime + " t " + Time.time + " - " + (Time.time - spawnTime));
-
-        return Time.time - spawnTime > minTimeToPickUp;
+        return Time.time - SpawnTime > minTimeToPickUp;
     }
 }
