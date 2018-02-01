@@ -35,8 +35,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4617878377550972}
-  - component: {fileID: 58030732624849764}
   - component: {fileID: 50585072788751294}
+  - component: {fileID: 58684896088649264}
   - component: {fileID: 114936244452882240}
   m_Layer: 0
   m_Name: Basketball Pickable
@@ -52,8 +52,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1158295240891750}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.29, y: -0.14, z: 0}
-  m_LocalScale: {x: 1.05, y: 1.05, z: 1}
+  m_LocalPosition: {x: -0.36, y: -0.175, z: 0}
+  m_LocalScale: {x: 1.3125, y: 1.3125, z: 1}
   m_Children: []
   m_Father: {fileID: 4617878377550972}
   m_RootOrder: 0
@@ -92,7 +92,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &58030732624849764
+--- !u!58 &58684896088649264
 CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -106,7 +106,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.75
 --- !u!114 &114936244452882240
 MonoBehaviour:
   m_ObjectHideFlags: 1
