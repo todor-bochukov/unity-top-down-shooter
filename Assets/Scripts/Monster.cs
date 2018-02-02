@@ -30,7 +30,7 @@ public class Monster : MonoBehaviour
             }
         }
 
-        body.velocity = GetDirectionToPlayer(closestPlayer) * speed * control.TimeScale;
+        body.velocity = GetDirectionToPlayer(closestPlayer) * speed;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
