@@ -8,37 +8,37 @@ public class GameControl : MonoBehaviour
     public UIControl ui;
     public float timeScaleSmoothTime;
 
-    public event Action onRestart;
-    public float TimeScale { get; private set; }
-
     private float timeScaleVelocity;
 
     private void Update()
     {
         bool inUI = ui.gameObject.activeSelf;
 
+        if (inUI)
+        {
+            Time.timeScale = 0f;
+            timeScaleVelocity = 0f;
+        }
+        else
+        {
+            Time.timeScale = Mathf.SmoothDamp(Time.timeScale, 1f, ref timeScaleVelocity, timeScaleSmoothTime, 100, Time.unscaledDeltaTime);
+        }
+
         if (Input.GetKeyUp(KeyCode.Escape))
         {
             ToggleUI(!inUI);
-        }
-        else if (!inUI)
-        {
-            TimeScale = Mathf.SmoothDamp(TimeScale, 1f, ref timeScaleVelocity, timeScaleSmoothTime);
         }
     }
 
     public void KillPlayer()
     {
-        if (onRestart != null)
-            onRestart();
+        ToggleUI(true);
+        ui.GameOver();
     }
 
     public void ToggleUI(bool openUI)
     {
         ui.gameObject.SetActive(openUI);
 
-        // Stop game / restart timeScale timer.
-        TimeScale = 0f;
-        timeScaleVelocity = 0f;
     }
 }

@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class UIControl : MonoBehaviour
 {
+    public GameObject main;
+    public GameObject gameOver;
+
     public void Quit()
     {
         Application.Quit();
@@ -15,6 +18,7 @@ public class UIControl : MonoBehaviour
 
     public void GameOver()
     {
-        // ???
+        main.SetActive(false);
+        gameOver.SetActive(true);
     }
 }

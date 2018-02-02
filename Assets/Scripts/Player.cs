@@ -13,7 +13,6 @@ public class Player : MonoBehaviour
     public Animator animator;
 
     private Rigidbody2D body;
-    private GameControl control;
 
     private bool useMouse = false;
 
@@ -22,10 +21,9 @@ public class Player : MonoBehaviour
     public Rigidbody2D Body { get { return body; } }
     public WeaponType Weapon { get; set; }
 
-    private void Start()
+    private void Awake()
     {
         body = GetComponent<Rigidbody2D>();
-        control = GetComponentInParent<GameControl>();
     }
 
     private void FixedUpdate()
@@ -38,30 +36,10 @@ public class Player : MonoBehaviour
         UpdateWeapon();
     }
 
-    private void OnEnable()
-    {
-        var control = GetComponentInParent<GameControl>();
-        if (control != null)
-            control.onRestart += Restart;
-    }
-
-    private void OnDisable()
-    {
-        var control = GetComponentInParent<GameControl>();
-        if (control != null)
-            control.onRestart += Restart;
-    }
-
-    void Restart()
-    {
-        body.position = new Vector2();
-        body.velocity = new Vector2();
-    }
-
     private void UpdateMovement()
     {
         Vector2 direction = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-        body.velocity = direction * speed * control.TimeScale;
+        body.velocity = direction * speed;
     }
 
     private void UpdateMode()
@@ -77,7 +55,7 @@ public class Player : MonoBehaviour
 
     private void UpdateLook()
     {
-        if (control.TimeScale == 0)
+        if (Time.timeScale == 0)
             return;
 
         float angle = Mathf.Rad2Deg * GetLookAngle();

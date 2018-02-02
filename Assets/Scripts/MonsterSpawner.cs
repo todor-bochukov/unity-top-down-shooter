@@ -11,15 +11,11 @@ public class MonsterSpawner : MonoBehaviour
     public uint targetMonsterCount;
     public float minimumTimeBetweenSpawns;
 
-    private GameControl control;
-
     private List<Monster> monsters = new List<Monster>();
     private float lastSpawnTime;
 
     private void Start()
     {
-        control = GetComponentInParent<GameControl>();
-
         if (spawnLocations.Length == 0)
         {
             spawnLocations = new Transform[1];
@@ -30,7 +26,7 @@ public class MonsterSpawner : MonoBehaviour
     private void Update()
     {
         if (monsters.Count < targetMonsterCount &&
-            lastSpawnTime + minimumTimeBetweenSpawns < Time.time * control.TimeScale)
+            lastSpawnTime + minimumTimeBetweenSpawns < Time.time)
         {
             lastSpawnTime = Time.time;
 
@@ -38,35 +34,10 @@ public class MonsterSpawner : MonoBehaviour
         }
     }
 
-    private void OnEnable()
-    {
-        var control = GetComponentInParent<GameControl>();
-        if (control != null)
-            control.onRestart += Restart;
-    }
-
-    private void OnDisable()
-    {
-        var control = GetComponentInParent<GameControl>();
-        if (control != null)
-            control.onRestart += Restart;
-    }
-
     public void KillMonster(Monster monster)
     {
         monsters.Remove(monster);
         Destroy(monster.gameObject);
-    }
-
-    private void Restart()
-    {
-        foreach (var monster in monsters)
-        {
-            Destroy(monster.gameObject);
-        }
-        monsters.Clear();
-
-        lastSpawnTime = Time.time;
     }
 
     private void TrySpawnMonster()
