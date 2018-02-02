@@ -224,7 +224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93cd31eb020b6274e96cf849e3752447, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 10
   playerLook: {fileID: 4094915592432208}
   playerWeapon: {fileID: 4372719021781528}
   projectileSpawnPoint: {fileID: 4677678160437462}
