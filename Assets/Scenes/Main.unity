@@ -168,6 +168,7 @@ MonoBehaviour:
   - {fileID: 345786035}
   targetMonsterCount: 300
   minimumTimeBetweenSpawns: 0.3
+  minimumDistanceToPlayer: 8
 --- !u!1 &56886660
 GameObject:
   m_ObjectHideFlags: 0
@@ -359,6 +360,7 @@ GameObject:
   - component: {fileID: 202690671}
   - component: {fileID: 202690673}
   - component: {fileID: 202690672}
+  - component: {fileID: 202690674}
   m_Layer: 5
   m_Name: Mouth
   m_TagString: Untagged
@@ -417,6 +419,20 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 202690670}
+--- !u!114 &202690674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 202690670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1573420865, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.3137255}
+  m_EffectDistance: {x: 1, y: -25}
+  m_UseGraphicAlpha: 1
 --- !u!1001 &231666364
 Prefab:
   m_ObjectHideFlags: 0
@@ -1898,7 +1914,7 @@ MonoBehaviour:
   m_Script: {fileID: 1573420865, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.347}
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.34509805}
   m_EffectDistance: {x: 1, y: -15}
   m_UseGraphicAlpha: 1
 --- !u!1 &697424234
@@ -2407,6 +2423,11 @@ Prefab:
     - target: {fileID: 4711623746664004, guid: cb18f34c5c0156741931d7c2580427d4, type: 2}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114072879077774128, guid: cb18f34c5c0156741931d7c2580427d4,
+        type: 2}
+      propertyPath: speed
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cb18f34c5c0156741931d7c2580427d4, type: 2}
@@ -3776,6 +3797,7 @@ GameObject:
   - component: {fileID: 1720407093}
   - component: {fileID: 1720407095}
   - component: {fileID: 1720407094}
+  - component: {fileID: 1720407096}
   m_Layer: 5
   m_Name: Right Eye
   m_TagString: Untagged
@@ -3840,6 +3862,20 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1720407092}
+--- !u!114 &1720407096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1720407092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1573420865, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.3137255}
+  m_EffectDistance: {x: 1, y: -25}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1722936886
 GameObject:
   m_ObjectHideFlags: 0
@@ -4386,6 +4422,7 @@ GameObject:
   - component: {fileID: 1874148863}
   - component: {fileID: 1874148865}
   - component: {fileID: 1874148864}
+  - component: {fileID: 1874148866}
   m_Layer: 5
   m_Name: Left Eye
   m_TagString: Untagged
@@ -4450,6 +4487,20 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1874148862}
+--- !u!114 &1874148866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1874148862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1573420865, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.3137255}
+  m_EffectDistance: {x: 1, y: -25}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1877002367
 GameObject:
   m_ObjectHideFlags: 0
