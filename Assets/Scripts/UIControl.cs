@@ -7,6 +7,15 @@ public class UIControl : MonoBehaviour
     public GameObject main;
     public GameObject gameOver;
 
+    private void Start()
+    {
+        // Scene restarted on game over. Do not pause.
+        if (Time.unscaledTime > 1)
+        {
+            gameObject.SetActive(false);
+        }
+    }
+
     public void Quit()
     {
         Application.Quit();

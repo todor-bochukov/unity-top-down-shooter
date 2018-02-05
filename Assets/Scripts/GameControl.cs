@@ -39,6 +39,5 @@ public class GameControl : MonoBehaviour
     public void ToggleUI(bool openUI)
     {
         ui.gameObject.SetActive(openUI);
-
     }
 }
