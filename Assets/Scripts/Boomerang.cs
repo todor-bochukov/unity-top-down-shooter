@@ -40,9 +40,12 @@ public class Boomerang : MonoBehaviour
         if (wall)
         {
             var contacts = collision.contacts;
-            var reflected = Vector2.Reflect(velocity, contacts[0].normal);
+            if (contacts.Length > 0)
+            {
+                var reflected = Vector2.Reflect(velocity, contacts[0].normal);
 
-            transform.Rotate(0, 0, Vector2.Angle(reflected, velocity));
+                transform.Rotate(0, 0, Vector2.Angle(reflected, velocity));
+            }
         }
     }
 }

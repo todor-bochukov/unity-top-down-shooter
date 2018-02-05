@@ -38,6 +38,8 @@ public class MonsterSpawner : MonoBehaviour
     {
         monsters.Remove(monster);
         Destroy(monster.gameObject);
+
+        GetComponentInParent<GameControl>().KillMonster();
     }
 
     private void TrySpawnMonster()

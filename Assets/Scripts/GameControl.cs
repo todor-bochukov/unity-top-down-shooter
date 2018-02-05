@@ -6,9 +6,12 @@ using UnityEngine;
 public class GameControl : MonoBehaviour
 {
     public UIControl ui;
+    public HUDControl hud;
     public float timeScaleSmoothTime;
 
     private float timeScaleVelocity;
+
+    private uint kills;
 
     private void Update()
     {
@@ -28,6 +31,12 @@ public class GameControl : MonoBehaviour
         {
             ToggleUI(!inUI);
         }
+    }
+
+    public void KillMonster()
+    {
+        ++kills;
+        hud.SetKills(kills);
     }
 
     public void KillPlayer()
