@@ -10,6 +10,7 @@ public class MonsterSpawner : MonoBehaviour
 
     public uint targetMonsterCount;
     public float minimumTimeBetweenSpawns;
+    public float minimumDistanceToPlayer;
 
     private List<Monster> monsters = new List<Monster>();
     private float lastSpawnTime;
@@ -52,6 +53,10 @@ public class MonsterSpawner : MonoBehaviour
 
         var monsterPrefab = monsterPrefabs[monsterIndex];
         var spawnLocation = spawnLocations[spawnLocationIndex];
+
+        var player = FindObjectOfType<Player>();
+        if (Vector3.Distance(player.transform.position, spawnLocation.transform.position) < minimumDistanceToPlayer)
+            return;
 
         var monster = Instantiate(monsterPrefab, spawnLocation.position, spawnLocation.rotation, transform);
         monsters.Add(monster);
