@@ -25,11 +25,11 @@ public class GameControl : MonoBehaviour
         else
         {
             Time.timeScale = Mathf.SmoothDamp(Time.timeScale, 1f, ref timeScaleVelocity, timeScaleSmoothTime, 100, Time.unscaledDeltaTime);
-        }
 
-        if (Input.GetKeyUp(KeyCode.Escape))
-        {
-            ToggleUI(!inUI);
+            if (Input.GetKeyUp(KeyCode.Escape))
+            {
+                ui.gameObject.SetActive(true);
+            }
         }
     }
 
@@ -41,12 +41,7 @@ public class GameControl : MonoBehaviour
 
     public void KillPlayer()
     {
-        ToggleUI(true);
+        ui.gameObject.SetActive(true);
         ui.GameOver();
-    }
-
-    public void ToggleUI(bool openUI)
-    {
-        ui.gameObject.SetActive(openUI);
     }
 }

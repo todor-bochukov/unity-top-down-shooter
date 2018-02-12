@@ -16,6 +16,14 @@ public class UIControl : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if (main.activeSelf && Input.GetKeyUp(KeyCode.Escape))
+        {
+            gameObject.SetActive(false);
+        }
+    }
+
     public void Quit()
     {
         Application.Quit();
