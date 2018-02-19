@@ -6,6 +6,8 @@ public class Monster : MonoBehaviour
 {
     public float speed;
 
+    public Animator animator;
+
     private Rigidbody2D body;
     private GameControl control;
 
@@ -31,6 +33,8 @@ public class Monster : MonoBehaviour
         }
 
         body.velocity = GetDirectionToPlayer(closestPlayer) * speed;
+
+        animator.SetFloat("angle", Vector2.SignedAngle(Vector2.right, body.velocity));
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
