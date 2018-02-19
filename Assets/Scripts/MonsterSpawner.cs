@@ -37,6 +37,8 @@ public class MonsterSpawner : MonoBehaviour
 
     public void KillMonster(Monster monster)
     {
+        Instantiate(monster.deathPrefab, monster.transform.position, monster.transform.rotation, transform);
+
         monsters.Remove(monster);
         Destroy(monster.gameObject);
 

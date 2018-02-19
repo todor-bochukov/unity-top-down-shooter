@@ -6,6 +6,8 @@ public class Monster : MonoBehaviour
 {
     public float speed;
 
+    public GameObject deathPrefab;
+
     public Animator animator;
 
     private Rigidbody2D body;

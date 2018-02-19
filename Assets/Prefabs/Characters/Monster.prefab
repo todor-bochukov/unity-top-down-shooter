@@ -137,6 +137,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  deathPrefab: {fileID: 1821182540815766, guid: d0852639c74b50c4992cd1193695e9e0,
+    type: 2}
   animator: {fileID: 95339608515696540}
 --- !u!212 &212528979070332578
 SpriteRenderer:
