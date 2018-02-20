@@ -1,9 +1,34 @@
 fileFormatVersion: 2
 guid: 7a308dddde6b3f9458b13bbb9136411e
-timeCreated: 1519129367
+timeCreated: 1519132395
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: hero_east_0
+    21300002: hero_east_1
+    21300004: hero_east_2
+    21300006: hero_east_3
+    21300008: hero_east_4
+    21300010: hero_east_5
+    21300012: hero_east_6
+    21300014: hero_east_7
+    21300016: hero_east_8
+    21300018: hero_east_9
+    21300020: hero_east_10
+    21300022: hero_east_11
+    21300024: hero_east_12
+    21300026: hero_east_13
+    21300028: hero_east_14
+    21300030: hero_east_15
+    21300032: hero_east_16
+    21300034: hero_east_17
+    21300036: hero_east_18
+    21300038: hero_east_19
+    21300040: hero_east_20
+    21300042: hero_east_21
+    21300044: hero_east_22
+    21300046: hero_east_23
+    21300048: hero_east_24
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -40,7 +65,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -66,9 +91,369 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: hero_east_0
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 1720
+        width: 208
+        height: 322
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero_east_1
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 1720
+        width: 208
+        height: 322
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero_east_2
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 1723
+        width: 208
+        height: 319
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero_east_3
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 1722
+        width: 208
+        height: 320
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero_east_4
+      rect:
+        serializedVersion: 2
+        x: 894
+        y: 1723
+        width: 208
+        height: 319
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero_east_5
+      rect:
+        serializedVersion: 2
+        x: 1118
+        y: 1722
+        width: 208
+        height: 320
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero_east_6
+      rect:
+        serializedVersion: 2
+        x: 1342
+        y: 1710
+        width: 208
+        height: 335
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero_east_7
+      rect:
+        serializedVersion: 2
+        x: 1561
+        y: 1710
+        width: 208
+        height: 335
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero_east_8
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 1710
+        width: 208
+        height: 335
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero_east_9
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 1361
+        width: 208
+        height: 335
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero_east_10
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 1361
+        width: 208
+        height: 335
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero_east_11
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 1361
+        width: 209
+        height: 335
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero_east_12
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 1361
+        width: 208
+        height: 335
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero_east_13
+      rect:
+        serializedVersion: 2
+        x: 885
+        y: 1361
+        width: 208
+        height: 335
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero_east_14
+      rect:
+        serializedVersion: 2
+        x: 1104
+        y: 1361
+        width: 208
+        height: 335
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero_east_15
+      rect:
+        serializedVersion: 2
+        x: 1323
+        y: 1359
+        width: 208
+        height: 337
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero_east_16
+      rect:
+        serializedVersion: 2
+        x: 1546
+        y: 1359
+        width: 208
+        height: 337
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero_east_17
+      rect:
+        serializedVersion: 2
+        x: 1769
+        y: 1359
+        width: 208
+        height: 337
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero_east_18
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 1008
+        width: 208
+        height: 337
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero_east_19
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 1008
+        width: 208
+        height: 337
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero_east_20
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 1008
+        width: 208
+        height: 337
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero_east_21
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 1008
+        width: 208
+        height: 337
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero_east_22
+      rect:
+        serializedVersion: 2
+        x: 901
+        y: 1008
+        width: 208
+        height: 337
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero_east_23
+      rect:
+        serializedVersion: 2
+        x: 1124
+        y: 1008
+        width: 208
+        height: 337
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero_east_24
+      rect:
+        serializedVersion: 2
+        x: 1347
+        y: 1008
+        width: 208
+        height: 337
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
     outline: []
     physicsShape: []
   spritePackingTag: 
