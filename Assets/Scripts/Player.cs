@@ -40,6 +40,9 @@ public class Player : MonoBehaviour
     {
         Vector2 direction = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         body.velocity = direction * speed;
+
+        animator.SetFloat("Move X", Mathf.Round(direction.x));
+        animator.SetFloat("Move Y", Mathf.Round(direction.y));
     }
 
     private void UpdateMode()

@@ -1,9 +1,39 @@
 fileFormatVersion: 2
 guid: 87da6659f31e2df43b4774036fb5023a
-timeCreated: 1519129368
+timeCreated: 1519132563
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: hero_southwest_0
+    21300002: hero_southwest_1
+    21300004: hero_southwest_2
+    21300006: hero_southwest_3
+    21300008: hero_southwest_4
+    21300010: hero_southwest_5
+    21300012: hero_southwest_6
+    21300014: hero_southwest_7
+    21300016: hero_southwest_8
+    21300018: hero_southwest_9
+    21300020: hero_southwest_10
+    21300022: hero_southwest_11
+    21300024: hero_southwest_12
+    21300026: hero_southwest_13
+    21300028: hero_southwest_14
+    21300030: hero_southwest_15
+    21300032: hero_southwest_16
+    21300034: hero_southwest_17
+    21300036: hero_southwest_18
+    21300038: hero_southwest_19
+    21300040: hero_southwest_20
+    21300042: hero_southwest_21
+    21300044: hero_southwest_22
+    21300046: hero_southwest_23
+    21300048: hero_southwest_24
+    21300050: hero_southwest_25
+    21300052: hero_southwest_26
+    21300054: hero_southwest_27
+    21300056: hero_southwest_28
+    21300058: hero_southwest_29
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -40,7 +70,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -66,9 +96,439 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: hero_southwest_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 1727
+        width: 220
+        height: 318
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero_southwest_1
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 1727
+        width: 220
+        height: 318
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero_southwest_2
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 1727
+        width: 220
+        height: 318
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero_southwest_3
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 1727
+        width: 220
+        height: 318
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero_southwest_4
+      rect:
+        serializedVersion: 2
+        x: 934
+        y: 1727
+        width: 220
+        height: 318
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero_southwest_5
+      rect:
+        serializedVersion: 2
+        x: 1166
+        y: 1727
+        width: 220
+        height: 318
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero_southwest_6
+      rect:
+        serializedVersion: 2
+        x: 1398
+        y: 1727
+        width: 220
+        height: 318
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero_southwest_7
+      rect:
+        serializedVersion: 2
+        x: 1630
+        y: 1727
+        width: 220
+        height: 318
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero_southwest_8
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 1396
+        width: 220
+        height: 318
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero_southwest_9
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 1396
+        width: 220
+        height: 318
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero_southwest_10
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 1396
+        width: 220
+        height: 318
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero_southwest_11
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 1396
+        width: 220
+        height: 318
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero_southwest_12
+      rect:
+        serializedVersion: 2
+        x: 934
+        y: 1396
+        width: 220
+        height: 318
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero_southwest_13
+      rect:
+        serializedVersion: 2
+        x: 1166
+        y: 1396
+        width: 220
+        height: 318
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero_southwest_14
+      rect:
+        serializedVersion: 2
+        x: 1398
+        y: 1396
+        width: 220
+        height: 318
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero_southwest_15
+      rect:
+        serializedVersion: 2
+        x: 1630
+        y: 1396
+        width: 220
+        height: 318
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero_southwest_16
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 1058
+        width: 219
+        height: 322
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero_southwest_17
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 1058
+        width: 219
+        height: 322
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero_southwest_18
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 1058
+        width: 219
+        height: 322
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero_southwest_19
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 1058
+        width: 219
+        height: 322
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero_southwest_20
+      rect:
+        serializedVersion: 2
+        x: 934
+        y: 1058
+        width: 219
+        height: 322
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero_southwest_21
+      rect:
+        serializedVersion: 2
+        x: 1166
+        y: 1058
+        width: 219
+        height: 322
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero_southwest_22
+      rect:
+        serializedVersion: 2
+        x: 1398
+        y: 1064
+        width: 220
+        height: 318
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero_southwest_23
+      rect:
+        serializedVersion: 2
+        x: 1631
+        y: 1053
+        width: 220
+        height: 323
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero_southwest_24
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 715
+        width: 219
+        height: 322
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero_southwest_25
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 715
+        width: 219
+        height: 322
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero_southwest_26
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 715
+        width: 219
+        height: 322
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero_southwest_27
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 715
+        width: 219
+        height: 322
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero_southwest_28
+      rect:
+        serializedVersion: 2
+        x: 934
+        y: 715
+        width: 219
+        height: 322
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero_southwest_29
+      rect:
+        serializedVersion: 2
+        x: 1166
+        y: 715
+        width: 219
+        height: 322
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
     outline: []
     physicsShape: []
   spritePackingTag: 

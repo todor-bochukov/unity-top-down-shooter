@@ -1,9 +1,37 @@
 fileFormatVersion: 2
 guid: d3adf9b4654eef940b175365188ab63e
-timeCreated: 1519129375
+timeCreated: 1519132499
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: hero_south_0
+    21300002: hero_south_1
+    21300004: hero_south_2
+    21300006: hero_south_3
+    21300008: hero_south_4
+    21300010: hero_south_5
+    21300012: hero_south_6
+    21300014: hero_south_7
+    21300016: hero_south_8
+    21300018: hero_south_9
+    21300020: hero_south_10
+    21300022: hero_south_11
+    21300024: hero_south_12
+    21300026: hero_south_13
+    21300028: hero_south_14
+    21300030: hero_south_15
+    21300032: hero_south_16
+    21300034: hero_south_17
+    21300036: hero_south_18
+    21300038: hero_south_19
+    21300040: hero_south_20
+    21300042: hero_south_21
+    21300044: hero_south_22
+    21300046: hero_south_23
+    21300048: hero_south_24
+    21300050: hero_south_25
+    21300052: hero_south_26
+    21300054: hero_south_27
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -40,7 +68,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -66,9 +94,411 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: hero_south_0
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 1722
+        width: 217
+        height: 319
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero_south_1
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 1722
+        width: 217
+        height: 319
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero_south_2
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 1720
+        width: 217
+        height: 323
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero_south_3
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 1721
+        width: 217
+        height: 320
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero_south_4
+      rect:
+        serializedVersion: 2
+        x: 929
+        y: 1721
+        width: 217
+        height: 322
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero_south_5
+      rect:
+        serializedVersion: 2
+        x: 1161
+        y: 1721
+        width: 217
+        height: 322
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero_south_6
+      rect:
+        serializedVersion: 2
+        x: 1397
+        y: 1725
+        width: 219
+        height: 318
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero_south_7
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 1721
+        width: 217
+        height: 320
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero_south_8
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 1387
+        width: 217
+        height: 323
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero_south_9
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 1387
+        width: 217
+        height: 323
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero_south_10
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 1387
+        width: 217
+        height: 323
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero_south_11
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 1387
+        width: 217
+        height: 323
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero_south_12
+      rect:
+        serializedVersion: 2
+        x: 936
+        y: 1389
+        width: 217
+        height: 319
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero_south_13
+      rect:
+        serializedVersion: 2
+        x: 1166
+        y: 1389
+        width: 217
+        height: 319
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero_south_14
+      rect:
+        serializedVersion: 2
+        x: 1396
+        y: 1389
+        width: 217
+        height: 319
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero_south_15
+      rect:
+        serializedVersion: 2
+        x: 1626
+        y: 1388
+        width: 217
+        height: 320
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero_south_16
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 1049
+        width: 217
+        height: 320
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero_south_17
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 1050
+        width: 217
+        height: 319
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero_south_18
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 1050
+        width: 217
+        height: 319
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero_south_19
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 1050
+        width: 217
+        height: 319
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero_south_20
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 1050
+        width: 217
+        height: 319
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero_south_21
+      rect:
+        serializedVersion: 2
+        x: 1158
+        y: 1050
+        width: 217
+        height: 319
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero_south_22
+      rect:
+        serializedVersion: 2
+        x: 1387
+        y: 1049
+        width: 217
+        height: 322
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero_south_23
+      rect:
+        serializedVersion: 2
+        x: 1619
+        y: 1049
+        width: 217
+        height: 322
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero_south_24
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 706
+        width: 217
+        height: 322
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero_south_25
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 706
+        width: 217
+        height: 322
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero_south_26
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 706
+        width: 217
+        height: 322
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero_south_27
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 706
+        width: 217
+        height: 322
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
     outline: []
     physicsShape: []
   spritePackingTag: 

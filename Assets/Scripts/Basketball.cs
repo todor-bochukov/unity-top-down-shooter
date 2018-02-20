@@ -28,6 +28,10 @@ public class Basketball : MonoBehaviour
 
             Destroy(gameObject);
         }
+        else if (player && player.Weapon)
+        {
+            projectile.Body.AddRelativeForce(Vector2.right * throwStrength, ForceMode2D.Impulse);
+        }
 
         var monster = collision.collider.GetComponent<Monster>();
         if (monster)
