@@ -1636,8 +1636,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 832a335d302079a46af2984c7fa2a9cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicVolumeDefault: 0
-  soundVolumeDefault: 0
+  musicVolumeDefault: 20
+  soundVolumeDefault: 65
 --- !u!4 &368022990
 Transform:
   m_ObjectHideFlags: 0
