@@ -30,7 +30,8 @@ public class Basketball : MonoBehaviour
         }
         else if (player && player.Weapon)
         {
-            projectile.Body.AddRelativeForce(Vector2.right * throwStrength, ForceMode2D.Impulse);
+            var strength = Mathf.Max(0, throwStrength - projectile.Body.velocity.magnitude);
+            projectile.Body.AddRelativeForce(Vector2.right * strength, ForceMode2D.Impulse);
         }
 
         var monster = collision.collider.GetComponent<Monster>();

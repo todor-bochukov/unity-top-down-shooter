@@ -6,7 +6,7 @@ public class Pickable : MonoBehaviour
 {
     public WeaponType type;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         var player = collision.GetComponent<Player>();
         if (!player) return;
