@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(AudioSource))]
 public class Player : MonoBehaviour
 {
     public float speed = 1.0f;
@@ -12,18 +13,26 @@ public class Player : MonoBehaviour
     public Transform projectileSpawnPoint;
     public Animator animator;
 
-    private Rigidbody2D body;
+    [Header("Sounds")]
+    public AudioClip pickUp;
+    public AudioClip fire;
 
     private bool useMouse = false;
 
     private GameObject icon;
 
-    public Rigidbody2D Body { get { return body; } }
+    public Rigidbody2D Body { get; private set; }
+    public AudioSource AudioSource { get; private set; }
+    public GameControl Control { get; private set; }
+
     public WeaponType Weapon { get; set; }
 
     private void Awake()
     {
-        body = GetComponent<Rigidbody2D>();
+        Body = GetComponent<Rigidbody2D>();
+        AudioSource = GetComponent<AudioSource>();
+
+        Control = GetComponentInParent<GameControl>();
     }
 
     private void FixedUpdate()
@@ -39,7 +48,7 @@ public class Player : MonoBehaviour
     private void UpdateMovement()
     {
         Vector2 direction = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-        body.velocity = direction * speed;
+        Body.velocity = direction * speed;
 
         animator.SetFloat("Move X", Mathf.Round(direction.x));
         animator.SetFloat("Move Y", Mathf.Round(direction.y));
@@ -72,6 +81,8 @@ public class Player : MonoBehaviour
 
         playerWeapon.gameObject.SetActive(true);
         icon = Instantiate(Weapon.icon, playerWeapon);
+
+        Control.Audio.Play(AudioSource, pickUp);
     }
 
     private void UpdateWeapon()
@@ -81,13 +92,14 @@ public class Player : MonoBehaviour
 
         if (Input.GetButtonDown("Fire1"))
         {
-            var control = GetComponentInParent<GameControl>();
-            Instantiate(Weapon.projectile, projectileSpawnPoint.position, playerLook.rotation, control.transform);
+            Instantiate(Weapon.projectile, projectileSpawnPoint.position, playerLook.rotation, Control.transform);
 
             Weapon = null;
 
             Destroy(icon);
             playerWeapon.gameObject.SetActive(false);
+
+            Control.Audio.Play(AudioSource, fire);
         }
     }
 
@@ -95,7 +107,7 @@ public class Player : MonoBehaviour
     {
         if (useMouse)
         {
-            var look = GetMouseWorldPosition() - body.position;
+            var look = GetMouseWorldPosition() - Body.position;
             return Mathf.Atan2(look.y, look.x);
         }
         else
@@ -103,7 +115,7 @@ public class Player : MonoBehaviour
             var look = new Vector2(Input.GetAxisRaw("Horizontal Look"), Input.GetAxisRaw("Vertical Look"));
             return look.SqrMagnitude() > 0.8f
                 ? Mathf.Atan2(look.y, look.x)
-                : Mathf.Deg2Rad * body.rotation;
+                : Mathf.Deg2Rad * Body.rotation;
         }
     }
 

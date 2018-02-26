@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioControl))]
 public class GameControl : MonoBehaviour
 {
     public UIControl ui;
@@ -12,6 +13,13 @@ public class GameControl : MonoBehaviour
     private float timeScaleVelocity;
 
     private uint kills;
+
+    public AudioControl Audio { get; private set; }
+
+    private void Awake()
+    {
+        Audio = GetComponent<AudioControl>();
+    }
 
     private void Update()
     {
