@@ -21,7 +21,8 @@ GameObject:
   - component: {fileID: 224560227819041264}
   - component: {fileID: 114575892905486890}
   - component: {fileID: 95684723532993658}
-  m_Layer: 0
+  - component: {fileID: 114260738858329134}
+  m_Layer: 5
   m_Name: Main Menu Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +40,7 @@ GameObject:
   - component: {fileID: 222761536298654162}
   - component: {fileID: 114838303641505224}
   - component: {fileID: 114157088654968020}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -77,6 +78,17 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.3137255}
   m_EffectDistance: {x: 1, y: -25}
   m_UseGraphicAlpha: 1
+--- !u!114 &114260738858329134
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1413602635630690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 853bbdceeed787d4bb4c0fd7a2b1c92e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114575892905486890
 MonoBehaviour:
   m_ObjectHideFlags: 1

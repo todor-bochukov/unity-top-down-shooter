@@ -10,10 +10,13 @@ public class AudioControl : MonoBehaviour
     public float musicVolumeDefault;
     public float soundVolumeDefault;
 
+    public static float musicVolumeDefaultS;
+    public static float soundVolumeDefaultS;
+
     void Awake()
     {
-        SetVolume(musicVolumeKey, GetMusicVolume());
-        SetVolume(soundVolumeKey, GetSoundVolume());
+        SetMusicVolume(GetMusicVolume());
+        SetSoundVolume(GetSoundVolume());
     }
 
     public float GetMusicVolume()
@@ -21,21 +24,55 @@ public class AudioControl : MonoBehaviour
         return PlayerPrefs.GetFloat(musicVolumeKey, musicVolumeDefault);
     }
 
+    public void SetMusicVolume(float volume)
+    {
+        foreach (var audioSource in FindObjectsOfType<AudioSource>())
+        {
+            if (audioSource.tag == musicVolumeKey)
+            {
+                audioSource.volume = volume;
+            }
+        }
+
+        PlayerPrefs.SetFloat(musicVolumeKey, volume);
+    }
+
     public float GetSoundVolume()
     {
         return PlayerPrefs.GetFloat(soundVolumeKey, soundVolumeDefault);
     }
 
-    public void SetVolume(string key, float value)
+    public void SetSoundVolume(float value)
     {
-        foreach (var go in GameObject.FindGameObjectsWithTag(key))
+        foreach (var audioSource in FindObjectsOfType<AudioSource>())
         {
-            foreach (var component in go.GetComponentsInChildren<AudioSource>())
+            if (audioSource.tag != musicVolumeKey)
             {
-                component.volume = value;
+                audioSource.volume = value;
             }
         }
 
-        PlayerPrefs.SetFloat(key, value);
+        PlayerPrefs.SetFloat(soundVolumeKey, value);
+    }
+
+    public void Play(AudioSource source, AudioClip clip)
+    {
+        source.clip = clip;
+
+        Play(source);
+    }
+
+    public void Play(AudioSource source)
+    {
+        if (source.tag == musicVolumeKey)
+        {
+            source.volume = GetMusicVolume();
+        }
+        else
+        {
+            source.volume = GetSoundVolume();
+        }
+
+        source.Play();
     }
 }

@@ -26,7 +26,7 @@ public class GameControl : MonoBehaviour
         {
             Time.timeScale = Mathf.SmoothDamp(Time.timeScale, 1f, ref timeScaleVelocity, timeScaleSmoothTime, 100, Time.unscaledDeltaTime);
 
-            if (Input.GetKeyUp(KeyCode.Escape))
+            if (Input.GetButtonDown("Cancel"))
             {
                 ui.gameObject.SetActive(true);
             }
@@ -43,5 +43,14 @@ public class GameControl : MonoBehaviour
     {
         ui.gameObject.SetActive(true);
         ui.GameOver();
+    }
+
+    public static AudioControl FindAudioControl()
+    {
+        return FindComponent<AudioControl>();
+    }
+    public static T FindComponent<T>()
+    {
+        return GameObject.FindWithTag("GameController").GetComponent<T>();
     }
 }

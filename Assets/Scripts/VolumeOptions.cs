@@ -7,21 +7,18 @@ using UnityEngine.UI;
 
 public class VolumeOptions : MonoBehaviour
 {
-    public AudioControl audioControl;
     public Slider musicVolume;
     public Slider soundVolume;
 
     private void Start()
     {
-        musicVolume.onValueChanged.AddListener(CreateSetVolumeFn(AudioControl.musicVolumeKey));
+        var audioControl = GameControl.FindAudioControl();
+
+        musicVolume.onValueChanged.AddListener(value => audioControl.SetMusicVolume(value));
         musicVolume.value = audioControl.GetMusicVolume();
 
-        soundVolume.onValueChanged.AddListener(CreateSetVolumeFn(AudioControl.soundVolumeKey));
+        soundVolume.onValueChanged.AddListener(value => audioControl.SetSoundVolume(value));
         soundVolume.value = audioControl.GetSoundVolume();
     }
 
-    private UnityAction<float> CreateSetVolumeFn(string key)
-    {
-        return value => audioControl.SetVolume(key, value);
-    }
 }
