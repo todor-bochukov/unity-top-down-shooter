@@ -89,6 +89,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 853bbdceeed787d4bb4c0fd7a2b1c92e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playOnStart: 0
+  clip: {fileID: 8300000, guid: 9e64379ad085e4a4e873594cb3801d94, type: 3}
 --- !u!114 &114575892905486890
 MonoBehaviour:
   m_ObjectHideFlags: 1

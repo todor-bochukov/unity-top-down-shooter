@@ -7,6 +7,8 @@ public class UIControl : MonoBehaviour
     public GameObject main;
     public GameObject gameOver;
 
+    public AudioSource backgroundMusic;
+
     private void Start()
     {
         // Scene restarted on game over. Do not pause.
@@ -27,6 +29,8 @@ public class UIControl : MonoBehaviour
 
     public void GameOver()
     {
+        backgroundMusic.Stop();
+
         main.SetActive(false);
         gameOver.SetActive(true);
     }

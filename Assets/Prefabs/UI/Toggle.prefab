@@ -182,12 +182,11 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 114385887785544618}
-        m_MethodName: OnButtonClick
-        m_Mode: 2
+        m_MethodName: Play
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: 9e64379ad085e4a4e873594cb3801d94,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -309,6 +308,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 853bbdceeed787d4bb4c0fd7a2b1c92e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playOnStart: 0
+  clip: {fileID: 8300000, guid: 9e64379ad085e4a4e873594cb3801d94, type: 3}
 --- !u!114 &114825605149513344
 MonoBehaviour:
   m_ObjectHideFlags: 1

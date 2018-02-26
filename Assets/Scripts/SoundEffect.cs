@@ -2,9 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ButtonClickSound : MonoBehaviour
+public class SoundEffect : MonoBehaviour
 {
-    public void OnButtonClick(AudioClip clip)
+    public bool playOnStart;
+    public AudioClip clip;
+
+    private void Start()
+    {
+        if (playOnStart)
+        {
+            Play();
+        }
+    }
+
+    public void Play()
     {
         var audioControl = GameControl.FindAudioControl();
         var audioSource = GetComponentInParent<AudioSource>();
