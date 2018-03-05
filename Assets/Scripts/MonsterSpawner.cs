@@ -35,6 +35,25 @@ public class MonsterSpawner : MonoBehaviour
         }
     }
 
+    private uint currentMonsterIndex = 0;
+
+    private void FixedUpdate()
+    {
+        if (monsters.Count == 0)
+            return;
+
+        var monstersUpdated = 0;
+        var startTime = Time.realtimeSinceStartup;
+        do
+        {
+            monsters[(int)(currentMonsterIndex % monsters.Count)].OnAI();
+
+            ++currentMonsterIndex;
+            ++monstersUpdated;
+        }
+        while (monstersUpdated < monsters.Count && Time.realtimeSinceStartup - startTime < 0.005);
+    }
+
     public void KillMonster(Monster monster)
     {
         Instantiate(monster.deathPrefab, monster.transform.position, monster.transform.rotation, transform);

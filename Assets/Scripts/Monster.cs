@@ -10,33 +10,24 @@ public class Monster : MonoBehaviour
 
     public Animator animator;
 
-    private Rigidbody2D body;
+    public Rigidbody2D Body { get; private set; }
     private GameControl control;
 
     private void Start()
     {
-        body = GetComponent<Rigidbody2D>();
+        Body = GetComponent<Rigidbody2D>();
         control = GetComponentInParent<GameControl>();
     }
 
-    private void FixedUpdate()
+    public void OnAI()
     {
-        Player closestPlayer = null;
-        foreach (var playerObject in GameObject.FindGameObjectsWithTag("Player"))
-        {
-            var player = playerObject.GetComponent<Player>();
-            if (!player) continue;
+        var player = FindObjectOfType<Player>();
 
-            if (!closestPlayer ||
-                GetDistanceToPlayer(closestPlayer) > GetDistanceToPlayer(player))
-            {
-                closestPlayer = player;
-            }
-        }
+        var target = Navigation.Instance.FindPath(Body.position, player.Body.position);
 
-        body.velocity = GetDirectionToPlayer(closestPlayer) * speed;
+        Body.velocity = (target - Body.position).normalized * speed;
 
-        animator.SetFloat("angle", Vector2.SignedAngle(Vector2.right, body.velocity));
+        animator.SetFloat("angle", Vector2.SignedAngle(Vector2.right, Body.velocity));
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -45,15 +36,5 @@ public class Monster : MonoBehaviour
         if (player == null) return;
 
         control.KillPlayer();
-    }
-
-    private Vector2 GetDirectionToPlayer(Player player)
-    {
-        return (player.Body.position - body.position).normalized;
-    }
-
-    private float GetDistanceToPlayer(Player player)
-    {
-        return (player.Body.position - body.position).magnitude;
     }
 }
