@@ -49,6 +49,9 @@ TagManager:
   - name: Wall
     uniqueID: 907970797
     locked: 0
+  - name: Furniture
+    uniqueID: 3790123263
+    locked: 0
   - name: Projectile
     uniqueID: 1608050411
     locked: 0
