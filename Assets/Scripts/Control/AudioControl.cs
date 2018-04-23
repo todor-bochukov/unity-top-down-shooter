@@ -10,9 +10,6 @@ public class AudioControl : MonoBehaviour
     public float musicVolumeDefault;
     public float soundVolumeDefault;
 
-    public static float musicVolumeDefaultS;
-    public static float soundVolumeDefaultS;
-
     void Awake()
     {
         SetMusicVolume(GetMusicVolume());
