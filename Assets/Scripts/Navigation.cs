@@ -214,7 +214,7 @@ public class Navigation : MonoBehaviour
     {
         foreach (var obstacle in obstacles)
         {
-            if (obstacle.bounds.Intersects(new Bounds(sample, new Vector2(1, 1))))
+            if (obstacle.bounds.Intersects(new Bounds(sample, Vector2.one)))
             {
                 return false;
             }
