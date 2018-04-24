@@ -32,7 +32,7 @@ public class Monster : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        var player = collision.rigidbody.GetComponent<Player>();
+        var player = collision.collider.GetComponent<Player>();
         if (player == null) return;
 
         control.KillPlayer();
