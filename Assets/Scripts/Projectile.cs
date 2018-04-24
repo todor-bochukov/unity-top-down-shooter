@@ -26,11 +26,16 @@ public class Projectile : MonoBehaviour
     {
         if (Body.IsSleeping())
         {
-            var control = GetComponentInParent<GameControl>();
-            Instantiate(type.pickable, transform.position, transform.rotation, control.transform);
-
-            Destroy(gameObject);
+            SpawnPickable();
         }
+    }
+
+    public void SpawnPickable()
+    {
+        var control = GetComponentInParent<GameControl>();
+        Instantiate(type.pickable, transform.position, transform.rotation, control.transform);
+
+        Destroy(gameObject);
     }
 
     public bool IsOldEnoughForPickup()

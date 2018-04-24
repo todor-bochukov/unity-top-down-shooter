@@ -22,9 +22,9 @@ GameObject:
   - component: {fileID: 50164765286362554}
   - component: {fileID: 58207859068644324}
   - component: {fileID: 114449857786867716}
-  - component: {fileID: 114393059519922072}
   - component: {fileID: 95301269050261038}
   - component: {fileID: 114982376052819978}
+  - component: {fileID: 114334087771704086}
   m_Layer: 0
   m_Name: Car Projectile
   m_TagString: Untagged
@@ -57,7 +57,7 @@ Transform:
   m_GameObject: {fileID: 1253215093711822}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.65, y: 0.65, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_Children: []
   m_Father: {fileID: 4926405043585672}
   m_RootOrder: 0
@@ -70,7 +70,7 @@ Transform:
   m_GameObject: {fileID: 1148826062784662}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4906067812805746}
   m_Father: {fileID: 0}
@@ -83,7 +83,7 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1148826062784662}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
@@ -128,7 +128,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114393059519922072
+--- !u!114 &114334087771704086
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -136,10 +136,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1148826062784662}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6bf739a4ec4730f4a9200a93f76afa57, type: 3}
+  m_Script: {fileID: 11500000, guid: 21eccfdb6f8cb9f44a4a4fe17974f62d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  throwStrength: 5
+  speed: 5
+  speedUpPerKill: 0.5
+  minAngleToRotate: 25
 --- !u!114 &114449857786867716
 MonoBehaviour:
   m_ObjectHideFlags: 1
