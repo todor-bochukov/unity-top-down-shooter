@@ -90,7 +90,7 @@ public class Player : MonoBehaviour
         if (!Weapon)
             return;
 
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButton("Fire1"))
         {
             Instantiate(Weapon.projectile, projectileSpawnPoint.position, playerLook.rotation, Control.transform);
 
