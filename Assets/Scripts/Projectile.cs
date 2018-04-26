@@ -12,6 +12,8 @@ public class Projectile : MonoBehaviour
     public Rigidbody2D Body { get; private set; }
     public float SpawnTime { get; private set; }
 
+    private bool destroyed = false;
+
     private void Awake()
     {
         Body = GetComponent<Rigidbody2D>();
@@ -30,12 +32,23 @@ public class Projectile : MonoBehaviour
         }
     }
 
+    public void Despawn()
+    {
+        if (destroyed) return;
+
+        destroyed = true;
+
+        Destroy(gameObject);
+    }
+
     public void SpawnPickable()
     {
+        if (destroyed) return;
+
         var control = GetComponentInParent<GameControl>();
         Instantiate(type.pickable, transform.position, transform.rotation, control.transform);
 
-        Destroy(gameObject);
+        Despawn();
     }
 
     public bool IsOldEnoughForPickup()
