@@ -25,12 +25,10 @@ public class Car : MonoBehaviour
         var targetVelocity = transform.rotation * Vector2.right * speed;
 
         var bestVelocity = targetVelocity;
-
         var bestRotation = transform.rotation;
-        var bestHitCount = projectile.Body.Cast(bestVelocity, raycastHits);
-        var bestHitDistance = FindNearestWall();
 
-        Debug.DrawLine(transform.position, transform.position + targetVelocity * bestHitDistance / targetVelocity.magnitude, Color.cyan);
+        projectile.Body.Cast(bestVelocity, raycastHits);
+        var bestHitDistance = FindNearestWall();
 
         if (bestHitDistance < 1)
         {
@@ -40,16 +38,11 @@ public class Car : MonoBehaviour
                 var velocity = rotation * Vector2.right * speed;
 
                 if (Vector2.Angle(targetVelocity, velocity) > 60)
-                {
-                    Debug.DrawLine(transform.position, transform.position + velocity, Color.red);
                     continue;
-                }
 
-                int hitCount = projectile.Body.Cast(velocity, raycastHits);
+                projectile.Body.Cast(velocity, raycastHits);
 
                 var hitDistance = FindNearestWall();
-
-                Debug.DrawLine(transform.position, transform.position + velocity * hitDistance / velocity.magnitude, Color.white);
 
                 if (hitDistance > bestHitDistance)
                 {
