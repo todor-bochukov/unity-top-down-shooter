@@ -75,11 +75,18 @@ public class Car : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         var player = collision.collider.GetComponent<Player>();
-        if (player && !player.Weapon && projectile.IsOldEnoughForPickup())
+        if (player)
         {
-            player.EquipWeapon(projectile.type);
+            if (player.Weapon)
+            {
+                projectile.SpawnPickable();
+            }
+            else if (projectile.IsOldEnoughForPickup())
+            {
+                player.EquipWeapon(projectile.type);
 
-            Destroy(gameObject);
+                Destroy(gameObject);
+            }
         }
 
         var monster = collision.collider.GetComponent<Monster>();
